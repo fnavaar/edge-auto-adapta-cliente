@@ -6,8 +6,8 @@
 - etapa: em_correcao
 - autorizacao_implementacao: confirmada — 2026-10-06T12:32-03:00; “pode usar eles como dados sintéticos, ou criar novos. Faça as alterações necessárias para garantir que construa o projeto”
 - teste_humano: pendente
-- verificacao_automatica: falhou — Skip criou versão 0.0.2 e aplicou a migração 0004; staticAnalysis e integração de hooks falharam por marcador de patch em registry_contracts_create.js. O hook foi substituído/corrigido na árvore pendente, mas ainda não revalidado. Test/build QA precisa ser repetido.
+- verificacao_automatica: falhou — QA v0.0.2 apontou marcador de patch no hook de contratos; hook foi reescrito e conferido sem marcador. Preparada migration 0005 aditiva para compatibilizar fixtures sem IDs novos e manter cobranças existentes; novo QA ainda pendente.
 - aprendizado: pendente
-- ultima_acao: schema 0004 verificado no Skip (clients, contracts, contract_rules, contract_audit); diagnóstico do QA registrado; hook com marcador corrigido; nenhum publish feito
-- proxima_acao: revisar compatibilidade dos fixtures semeados e rodar novamente o pipeline QA do Skip, sem publicar
-- atualizado_em: 2026-10-06T13:40:24-03:00
+- ultima_acao: diagnosticada divergência fixture/validador; criada migration 0005_normalize_registry_fixtures.js idempotente, ampliada ação de auditoria, corrigidos campos de fixture da UI e removido hook com erro; nenhuma publicação
+- proxima_acao: executar pipeline QA completo do Skip e validar a migration 0005 e build; preservar .skip.config.json sem edição manual
+- atualizado_em: 2026-10-06T17:21:47-03:00
